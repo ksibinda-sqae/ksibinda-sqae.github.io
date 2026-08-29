@@ -207,11 +207,61 @@
 
         /* Projects */
 
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        .projects-grid .project-card {
+            margin-bottom: 0;
+        }
+
         .project-card {
             background: #1e293b;
             border: 1px solid #334155;
             border-radius: 12px;
             padding: 30px;
+            margin-bottom: 25px;
+        }
+
+        .project-header {
+            margin-bottom: 15px;
+        }
+
+        .project-type {
+            display: inline-block;
+            font-size: 0.75rem;
+            letter-spacing: 0.12em;
+            color: #38bdf8;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .project-features {
+            margin: 0 0 25px 20px;
+            color: #94a3b8;
+        }
+
+        .project-features li {
+            margin-bottom: 8px;
+        }
+
+        .project-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .text-link {
+            color: #38bdf8;
+            font-weight: bold;
+            transition: opacity 0.2s ease;
+        }
+
+        .text-link:hover {
+            opacity: 0.8;
         }
 
         .project-card h3 {
@@ -308,6 +358,10 @@
                 min-height: 70vh;
             }
 
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
             section {
                 padding: 65px 0;
             }
@@ -390,20 +444,35 @@
 
                     <p>
                         I'm a QA Automation Engineer with over 4 years of
-                        experience in software quality assurance and test
-                        automation.
+                        experience working across retail, financial services,
+                        and fleet management. My experience covers manual and
+                        automation testing across web, mobile, backend, and API
+                        applications.
                     </p>
 
                     <p>
-                        My experience spans retail, financial services,
-                        insurance and fleet management, with a strong focus
-                        on building reliable automated test solutions.
+                        I work primarily with Java, Selenium WebDriver, Appium,
+                        TestNG, Playwright, and TypeScript. My experience includes
+                        building and maintaining automated regression suites,
+                        API testing, SQL validation, and supporting CI/CD
+                        pipelines to help deliver reliable software.
                     </p>
 
                     <p>
-                        I'm particularly interested in automation architecture,
-                        framework design, CI/CD and creating test systems that
-                        are maintainable as applications grow.
+                        Beyond writing automated tests, I enjoy designing
+                        automation frameworks that are maintainable, reusable,
+                        and easy for teams to work with. I've built automation
+                        frameworks using both Selenium with Java and Playwright
+                        with TypeScript, with a focus on clean architecture,
+                        reusable components, reporting, logging, test data,
+                        and reliable execution.
+                    </p>
+
+                    <p>
+                        I enjoy working in Agile teams and collaborating with
+                        developers, business analysts, product owners, and
+                        fellow QA engineers to deliver quality solutions that
+                        meet business and user needs.
                     </p>
 
                 </div>
@@ -436,21 +505,21 @@
                     <article class="skill-card">
                         <h3>Languages</h3>
                         <p>
-                            Java, TypeScript, Python, JavaScript
+                            Java, TypeScript, JavaScript
                         </p>
                     </article>
 
                     <article class="skill-card">
                         <h3>API & Data</h3>
                         <p>
-                            API Testing, Postman, SQL
+                            API Testing, REST Assured, Postman, SQL, Git
                         </p>
                     </article>
 
                     <article class="skill-card">
                         <h3>CI/CD</h3>
                         <p>
-                            GitHub Actions, Maven, automated test pipelines
+                            GitHub Actions, Azure DevOps, Maven, automated test pipelines
                         </p>
                     </article>
 
@@ -485,35 +554,115 @@
 
                 <div class="section-title">
                     <h2>Projects</h2>
-                    <p>Automation projects and framework development.</p>
+                    <p>
+                        Automation frameworks built with maintainability,
+                        reusability, and reliable execution in mind.
+                    </p>
                 </div>
 
-                <article class="project-card">
+                <div class="projects-grid">
 
-                    <h3>
-                        Selenium Java Automation Framework
-                    </h3>
+                    <article class="project-card">
 
-                    <p>
-                        A custom automation framework designed with
-                        maintainability, reusability and separation of
-                        responsibilities in mind.
-                    </p>
+                        <div class="project-header">
+                            <span class="project-type">FRAMEWORK</span>
+                            <h3>Selenium Java Automation Framework</h3>
+                        </div>
 
-                    <div class="tags">
-                        <span class="tag">Java</span>
-                        <span class="tag">Selenium</span>
-                        <span class="tag">TestNG</span>
-                        <span class="tag">Maven</span>
-                        <span class="tag">Allure</span>
-                        <span class="tag">GitHub Actions</span>
-                    </div>
+                        <p>
+                            A custom Selenium automation framework built with Java
+                            and TestNG. The framework focuses on separation of
+                            responsibilities, reusable automation components,
+                            clear test flows, structured reporting, and reliable
+                            test execution.
+                        </p>
 
-                    <a href="https://github.com/kanyasibinda-sqae" target="_blank" class="button button-secondary">
-                        View on GitHub
-                    </a>
+                        <div class="tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Selenium WebDriver</span>
+                            <span class="tag">TestNG</span>
+                            <span class="tag">Maven</span>
+                            <span class="tag">Allure</span>
+                            <span class="tag">SLF4J</span>
+                            <span class="tag">GitHub Actions</span>
+                        </div>
 
-                </article>
+                        <h4>Framework Highlights</h4>
+
+                        <ul class="project-features">
+                            <li>Page Object Model for maintainable page interactions</li>
+                            <li>Reusable application components and flows</li>
+                            <li>Centralised browser actions and wait management</li>
+                            <li>Custom framework and assertion exceptions</li>
+                            <li>Structured logging and Allure reporting</li>
+                            <li>Test data and environment management</li>
+                            <li>CI/CD execution through GitHub Actions</li>
+                        </ul>
+
+                        <div class="project-actions">
+                            <a href="https://github.com/kanyasibinda-sqae" target="_blank" rel="noopener noreferrer"
+                                class="button button-secondary">
+                                View on GitHub
+                            </a>
+
+                            <a href="#approach" class="text-link">
+                                View Architecture →
+                            </a>
+                        </div>
+
+                    </article>
+
+
+                    <article class="project-card">
+
+                        <div class="project-header">
+                            <span class="project-type">FRAMEWORK</span>
+                            <h3>Playwright TypeScript Automation Framework</h3>
+                        </div>
+
+                        <p>
+                            A Playwright automation framework built with TypeScript
+                            for both UI and API testing. The framework keeps
+                            browser-based and API automation independently
+                            executable while providing a consistent test architecture.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Playwright</span>
+                            <span class="tag">UI Testing</span>
+                            <span class="tag">API Testing</span>
+                            <span class="tag">Allure</span>
+                            <span class="tag">Fixtures</span>
+                            <span class="tag">GitHub Actions</span>
+                        </div>
+
+                        <h4>Framework Highlights</h4>
+
+                        <ul class="project-features">
+                            <li>Separate UI and API test fixtures</li>
+                            <li>Browser-free API test execution</li>
+                            <li>Reusable pages, flows, and assertions</li>
+                            <li>Application and framework separation</li>
+                            <li>Environment and test data management</li>
+                            <li>Allure reporting and failure diagnostics</li>
+                            <li>CI/CD integration with GitHub Actions</li>
+                        </ul>
+
+                        <div class="project-actions">
+                            <a href="https://github.com/kanyasibinda-sqae" target="_blank" rel="noopener noreferrer"
+                                class="button button-secondary">
+                                View on GitHub
+                            </a>
+
+                            <a href="#approach" class="text-link">
+                                View Architecture →
+                            </a>
+                        </div>
+
+                    </article>
+
+                </div>
 
             </div>
 

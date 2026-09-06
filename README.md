@@ -20,7 +20,7 @@ Repository: [playwright-api-automation-project](https://github.com/ksibinda-sqae
 
 ### Playwright UI Automation Project
 
-Standalone TypeScript and Playwright UI automation for SauceDemo. The suite covers login, logout, product details, and cart journeys through reusable page objects, flows, fixtures, assertions, diagnostics, and CI reporting.
+TypeScript and Playwright UI automation for SauceDemo. The suite covers login, logout, product details, and cart journeys through reusable page objects, flows, fixtures, assertions, diagnostics, and CI reporting.
 
 Repository: [playwright-ui-automation-project](https://github.com/ksibinda-sqae/playwright-ui-automation-project)
 
